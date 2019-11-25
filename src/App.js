@@ -1,10 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
+import bandPhoto from './band.jpg'
 import './App.css';
 
 let styles = {
   color:'red',
   fontFamily: 'Verdana'
+}
+
+function hello()
+{
+  return (
+    <div>
+        <p>Hello!</p>
+        <p>How are you?</p>
+    </div>
+  )
 }
 
 function App() {
@@ -15,9 +26,15 @@ function App() {
   if (x>10) {
     styles.color='green'
   }
+  let picture = require('./pikachu.png')
   return (
   <div>
+    {hello()}
     <p className='title'>Hello</p>
+    <img src={ require('./pikachu.png') }/>
+    <img src={ require('./images/dog.jpg')}/>
+    <img src={picture}/>
+    <img src={bandPhoto}/>
     <p style={styles}>We bring cookies</p>
     <p style={{ color:'orange', fontSize:'45px'}}>Orange</p>
     {message}
